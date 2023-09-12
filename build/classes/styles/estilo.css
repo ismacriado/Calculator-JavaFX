@@ -1,0 +1,23 @@
+.botones{
+    -fx-background-color: gray;
+    -fx-border-radius: 10%;
+    -fx-background-radius: 20%;
+    -fx-font-weight: bold;
+}
+
+.operaciones{
+    -fx-background-color: tomato;
+    -fx-border-radius: 10%;
+    -fx-background-radius: 20%;
+    -fx-font-weight: bold;
+}
+
+Label{
+    -fx-background-color: white;
+    -fx-border-radius: 10%;
+    -fx-background-radius: 20%;
+}
+
+#AnchorPane{
+    -fx-background-color: blue;
+}

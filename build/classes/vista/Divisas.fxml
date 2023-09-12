@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="fondo" onKeyPressed="#key_pressed" prefHeight="457.0" prefWidth="385.0" stylesheets="/vista/estilo.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.DivisasController">
+   <children>
+      <Button layoutX="60.0" layoutY="366.0" mnemonicParsing="false" onAction="#click" prefHeight="52.0" prefWidth="52.0" styleClass="botones" text="0" />
+      <Button layoutX="60.0" layoutY="302.0" mnemonicParsing="false" onAction="#click" prefHeight="52.0" prefWidth="52.0" styleClass="botones" text="1" />
+      <Button layoutX="133.0" layoutY="302.0" mnemonicParsing="false" onAction="#click" prefHeight="52.0" prefWidth="52.0" styleClass="botones" text="2" />
+      <Button layoutX="207.0" layoutY="302.0" mnemonicParsing="false" onAction="#click" prefHeight="52.0" prefWidth="52.0" styleClass="botones" text="3" />
+      <Button layoutX="60.0" layoutY="238.0" mnemonicParsing="false" onAction="#click" prefHeight="52.0" prefWidth="52.0" styleClass="botones" text="4" />
+      <Button layoutX="133.0" layoutY="238.0" mnemonicParsing="false" onAction="#click" prefHeight="52.0" prefWidth="52.0" styleClass="botones" text="5" />
+      <Button layoutX="207.0" layoutY="238.0" mnemonicParsing="false" onAction="#click" prefHeight="52.0" prefWidth="52.0" styleClass="botones" text="6" />
+      <Button layoutX="60.0" layoutY="173.0" mnemonicParsing="false" onAction="#click" prefHeight="52.0" prefWidth="52.0" styleClass="botones" text="7" />
+      <Button layoutX="133.0" layoutY="173.0" mnemonicParsing="false" onAction="#click" prefHeight="52.0" prefWidth="52.0" styleClass="botones" text="8" />
+      <Button layoutX="207.0" layoutY="173.0" mnemonicParsing="false" onAction="#click" prefHeight="52.0" prefWidth="52.0" styleClass="botones" text="9" />
+      <Button layoutX="278.0" layoutY="173.0" mnemonicParsing="false" onAction="#resetear" prefHeight="52.0" prefWidth="52.0" styleClass="operaciones" text="C" />
+      <Button fx:id="btn_aux" layoutX="133.0" layoutY="366.0" mnemonicParsing="false" onAction="#click" prefHeight="52.0" prefWidth="52.0" styleClass="botones" text="." />
+      <Button layoutX="275.0" layoutY="240.0" mnemonicParsing="false" onAction="#igual" prefHeight="178.0" prefWidth="59.0" styleClass="operaciones" text="=" />
+      <ComboBox fx:id="tipo_conversion" layoutX="55.0" layoutY="110.0" prefHeight="38.0" prefWidth="96.0" />
+      <ComboBox fx:id="valor_origen" layoutX="163.0" layoutY="110.0" onShowing="#abrir_combo_origen" prefHeight="38.0" prefWidth="68.0" />
+      <ComboBox fx:id="valor_destino" layoutX="246.0" layoutY="110.0" onShowing="#abrir_combo_destino" prefHeight="38.0" prefWidth="87.0" />
+      <Label fx:id="label_result" layoutX="53.0" layoutY="39.0" prefHeight="52.0" prefWidth="281.0" />
+      <MenuBar layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="385.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#abrir_fechas" text="Fechas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ir_calc_cientifica" text="Científica" />
+              <MenuItem mnemonicParsing="false" onAction="#ir_calc_normal" text="Calculadora normal" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Editar">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#cambio_color" text="Cambio de color" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#historial" text="Historial" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

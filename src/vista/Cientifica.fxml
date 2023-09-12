@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="fondo" onKeyPressed="#key_pressed" prefHeight="445.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.CientificaController">
+   <children>
+      <Button layoutX="30.0" layoutY="360.0" mnemonicParsing="false" onAction="#numeros" prefHeight="47.0" prefWidth="52.0" styleClass="botones" text="0" />
+      <Button layoutX="30.0" layoutY="297.0" mnemonicParsing="false" onAction="#numeros" prefHeight="47.0" prefWidth="52.0" styleClass="botones" text="1" />
+      <Button layoutX="96.0" layoutY="297.0" mnemonicParsing="false" onAction="#numeros" prefHeight="47.0" prefWidth="52.0" styleClass="botones" text="2" />
+      <Button layoutX="162.0" layoutY="297.0" mnemonicParsing="false" onAction="#numeros" prefHeight="47.0" prefWidth="52.0" styleClass="botones" text="3" />
+      <Button layoutX="30.0" layoutY="234.0" mnemonicParsing="false" onAction="#numeros" prefHeight="47.0" prefWidth="52.0" styleClass="botones" text="4" />
+      <Button layoutX="96.0" layoutY="234.0" mnemonicParsing="false" onAction="#numeros" prefHeight="47.0" prefWidth="52.0" styleClass="botones" text="5" />
+      <Button layoutX="162.0" layoutY="234.0" mnemonicParsing="false" onAction="#numeros" prefHeight="47.0" prefWidth="52.0" styleClass="botones" text="6" />
+      <Button layoutX="30.0" layoutY="175.0" mnemonicParsing="false" onAction="#numeros" prefHeight="47.0" prefWidth="52.0" styleClass="botones" text="7" />
+      <Button layoutX="96.0" layoutY="175.0" mnemonicParsing="false" onAction="#numeros" prefHeight="47.0" prefWidth="52.0" styleClass="botones" text="8" />
+      <Button layoutX="162.0" layoutY="175.0" mnemonicParsing="false" onAction="#numeros" prefHeight="47.0" prefWidth="52.0" styleClass="botones" text="9" />
+      <Button layoutX="30.0" layoutY="116.0" mnemonicParsing="false" onAction="#memorias_mas" prefHeight="47.0" prefWidth="52.0" styleClass="operaciones" text="M+" />
+      <Button layoutX="96.0" layoutY="116.0" mnemonicParsing="false" onAction="#memorias_menos" prefHeight="47.0" prefWidth="52.0" styleClass="operaciones" text="M-" />
+      <Button layoutX="162.0" layoutY="116.0" mnemonicParsing="false" onAction="#resetear" prefHeight="47.0" prefWidth="52.0" styleClass="operaciones" text="C" />
+      <Button layoutX="96.0" layoutY="360.0" mnemonicParsing="false" onAction="#numeros" prefHeight="47.0" prefWidth="52.0" styleClass="botones" text="." />
+      <Button fx:id="btn_aux" layoutX="162.0" layoutY="360.0" mnemonicParsing="false" onAction="#cambiar_signo" prefHeight="47.0" prefWidth="52.0" styleClass="operaciones" text="±" />
+      <Button layoutX="225.0" layoutY="116.0" mnemonicParsing="false" onAction="#operacion" prefHeight="47.0" prefWidth="52.0" styleClass="operaciones" text="*" />
+      <Button layoutX="225.0" layoutY="175.0" mnemonicParsing="false" onAction="#operacion" prefHeight="47.0" prefWidth="52.0" styleClass="operaciones" text="+" />
+      <Button layoutX="225.0" layoutY="234.0" mnemonicParsing="false" onAction="#operacion" prefHeight="47.0" prefWidth="52.0" styleClass="operaciones" text="-" />
+      <Button layoutX="225.0" layoutY="297.0" mnemonicParsing="false" onAction="#operacion" prefHeight="47.0" prefWidth="52.0" styleClass="operaciones" text="/" />
+      <Button layoutX="225.0" layoutY="360.0" mnemonicParsing="false" onAction="#click_igual" prefHeight="47.0" prefWidth="122.0" styleClass="operaciones" text="=" />
+      <Button layoutX="295.0" layoutY="297.0" mnemonicParsing="false" onAction="#operacion" prefHeight="47.0" prefWidth="52.0" styleClass="operaciones" text="tan" />
+      <Button layoutX="295.0" layoutY="234.0" mnemonicParsing="false" onAction="#operacion" prefHeight="47.0" prefWidth="52.0" styleClass="operaciones" text="cos" />
+      <Button layoutX="295.0" layoutY="175.0" mnemonicParsing="false" onAction="#operacion" prefHeight="47.0" prefWidth="52.0" styleClass="operaciones" text="sin" />
+      <Button layoutX="295.0" layoutY="116.0" mnemonicParsing="false" onAction="#operacion" prefHeight="47.0" prefWidth="52.0" styleClass="operaciones" text="X^ " />
+      <Label fx:id="resultado" layoutX="24.0" layoutY="46.0" prefHeight="47.0" prefWidth="324.0" />
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="376.0">
+        <menus>
+          <Menu mnemonicParsing="false" onAction="#click_vuelta_calc" text="Archivo">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#abrir_fechas" text="Fechas" />
+                  <MenuItem mnemonicParsing="false" onAction="#convertidor_click" text="Convertidor " />
+              <MenuItem mnemonicParsing="false" text="Calculadora" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Editar">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#click_cambio_color" text="Cambio de estilos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#abrir_historial" text="Historial" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
